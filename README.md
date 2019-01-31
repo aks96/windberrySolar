@@ -1,2 +1,2 @@
 # WindberrySolar.github.io
-Laundry website 
+solar panel supplier website 
