@@ -35,14 +35,15 @@ THIS FILE USES PHPMAILER INSTEAD OF THE PHP MAIL() FUNCTION
 
 if($_POST["submit"]) {
     $recipient="sales@windberrysolar.com";
-    $subject="Form to email message";
+    $subject="Enquiry Message";
     $sender=$_POST["name"];
     $senderEmail=$_POST["email"];
+    $senderPhone=$_POST["phone"];
     $message=$_POST["message"];
 
-    $mailBody="Name: $name\nEmail: $email\n\n$message";
+    $mailBody="Name: $name\nEmail: $email\nPhone: $phone\n\n$message";
 
-    mail($recipient, $subject, $mailBody, "From: $sender <$email>");
+    mail($recipient, $subject, $mailBody, "From: $name <$email>");
 
     $thankYou="<p>Thank you! Your message has been sent.</p>";
 }
