@@ -23,6 +23,9 @@
 	
 	
     <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <!-- <script type="text/javascript" src=""></script> -->
+
+
 	
 </head>
 <style type="text/css">
@@ -37,8 +40,11 @@
     left: 900px;
     display:inline-table;
     z-index:10;
-    background-color: #6495ED;
-    width: 30% 
+    background-color: #000000;
+    opacity: 0.6;
+    /*width: 30% */
+    padding : 30px 20px;
+    width : 30%;
 }
 }
 </style>
@@ -57,7 +63,7 @@
 					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
 						<div class="info">
 							<div class="info-item">
-								<span class="fa fa-phone"></span> Phone: 989-929-9883
+								<span class="fa fa-phone"></span> Phone: 98-99299-883
 							</div>
 							<div class="info-item">
 								<span class="fa fa-envelope-o"></span> <a href="mailto:info@Windberrysolar.com" title="">Email sales@Windberrysolar.com</a>
@@ -111,31 +117,31 @@
 			</div>
 		</div>
 		<div class="imgbg" style="background:url('images/banner2.jpg') no-repeat center center;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover">
-			<img class="mySlides" src="images/banner2.png" style="width:100%">
+			<img class="mySlides" src="images/banner2.jpg" style="width:100%">
 		  <img class="mySlides" src="images/banner3.jpg" style="width:100%">
 		  <img class="mySlides" src="images/banner4.jpg" style="width:100%">
 		  
 		  <!-- form -->
-		  <form id="contact-form" method="post" action="contact.php" role="form" >
-		  	<label for="form_name" style="font-weight: bold;">Firstname *</label>
-		  	<input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required." style="width: 100%; height: 70%">
+		  <form id="contact-form" role="form" >
+		  	<label for="name" style="font-weight: bold;">Firstname *</label>
+		  	<input id="name" type="text" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="Namename is required." style="width: 100%; height: 70%">
    			<!-- <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required."> -->
-   			<label for="form_name" style="font-weight: bold;">Email *</label>
-   			<input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required." style="width: 100%; height: 70%">
-   			<label for="form_name" style="font-weight: bold;">Phone No. *</label>
-   			<input id="form_number" type="text" name="phone" class="form-control" placeholder="Please enter your phone number *" required="required" data-error="number is required." style="width: 100%; height: 70%">
-   			<label for="form_name" style="font-weight: bold;">Specify Your Need*</label>
-   			<select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need." style="width: 100%; height: 70%">
+   			<label for="email" style="font-weight: bold;">Email *</label>
+   			<input id="email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Email is required." style="width: 100%; height: 70%">
+   			<label for="phone" style="font-weight: bold;">Phone No. *</label>
+   			<input id="phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone number *" required="required" data-error="number is required." style="width: 100%; height: 70%">
+   			<label for="need" style="font-weight: bold;">Specify Your Need*</label>
+   			<select id="need" name="need" class="form-control" required="required" data-error="Please specify your need." style="width: 100%; height: 70%">
                 <option value="Choose your option">Choose your option</option>
                 <option value="Request quotation">Request quotation</option>
                 <option value="Request order status">Request order status</option>
                 <option value="Request copy of an invoice">Request copy of an invoice</option>
                 <option value="Other">Other</option>
             </select>
-            <label for="form_name" style="font-weight: bold;">Message *</label>
-            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="3" required="required" data-error="Please, leave us a message." style="width: 100%; height: 70%"></textarea>
+            <label for="msg" style="font-weight: bold;">Message *</label>
+            <textarea id="msg" name="message" class="form-control" placeholder="Message for me *" rows="3" required="required" data-error="Please, leave us a message." style="width: 100%; height: 70%"></textarea>
 
-            <input type="submit" class="btn btn-success btn-send" value="Enquire Us" name="submit" style=" width: 100%">
+            <button id="submit-btn" class="btn btn-success btn-send" value="Enquire Us" style=" width: 100%">Submit</button>
 		</div>
 		<!-- <div class="w3-content w3-section" style="max-width:500px">
 		  <img class="mySlides" src="images/banner2.png" style="width:100%">
@@ -150,7 +156,7 @@
 					</div>
 					<div class="work-info-body">
 						Have a question? call us now
-						<div class="work-info-lead">989-929-9883</div>
+						<div class="work-info-lead">98-99299-883</div>
 					</div>
 				</div>
 				<div class="work-info-item">
@@ -356,13 +362,35 @@
 	
 	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			console.log("Document ready");
+			$("#submit-btn").click(function(e){
+				console.log("button clicked");
+				e.preventDefault();
+				// var formName = $("#form_name").val()
+				console.log("Submitting form");
+		        $.ajax({
+		            type: 'POST',
+		            url: 'php/contact.php',
+		            data: { 
+		            		name: $("#name").val(), 
+		            		email: $("#email").val(),
+		            		need: $("#need").val(),
+		            		phone: $("#phone").val(),
+		                    message: $("#msg").text() 
+		                }
+		        });
+			});
+		});
+	</script>
 	<script type='text/javascript' src='https://maps.google.com/maps/api/js?sensor=false&amp;ver=4.1.5'></script>
 	<script type='text/javascript' src='js/jqBootstrapValidation.js'></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-hover-dropdown.min.js"></script>
 	
 	<script type="text/javascript" src="js/script.js"></script>
-	<script src="contact.js"></script>
+	<script src="js/contact.js"></script>
 	<!-- <script>
 		var slideIndex = 1;
 		showDivs(slideIndex);
@@ -398,6 +426,7 @@
 		  setTimeout(carousel, 2000); // Change image every 2 seconds
 		}
 	</script>
+
 	
 </body>
 
