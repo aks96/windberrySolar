@@ -1,5 +1,5 @@
 <?php 
-require 'vendor/autoload.php';
+require("/sendgrid-php/sendgrid-php.php");
 if(isset($_POST['submit'])){
 
 
