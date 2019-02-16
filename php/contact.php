@@ -2,7 +2,7 @@
 require '../vendor/autoload.php';
 if(isset($_POST['submit'])){
 
- $from = new SendGrid\Email(null,'sales@windberrysolar.com');
+ $from = new SendGrid\Email(null,"sales@windberrysolar.com");
  $to = new SendGrid\Email(null, $_POST['email']);
  $subject="Enquiry Message";
  $sender=$_POST["name"];
@@ -20,8 +20,7 @@ $response = $sg->client->mail()->send()->post($mail);
 
 $thankYou="<p>Thank you! Your message has been sent.</p>";
     echo("<br>".$thankYou);
-    echo("Status : ".$response);
-
+    
 
     }
 ?>
