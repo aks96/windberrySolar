@@ -2,44 +2,26 @@
 require '../vendor/autoload.php';
 if(isset($_POST['submit'])){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// If you are using Composer
-
-
-// If you are not using Composer (recommended)
-// require("path/to/sendgrid-php/sendgrid-php.php");
-
- $from = new SendGrid\Email(null, "sales@windberrysolar.com");
- echo '<from';
- $subject = "Hello World from the SendGrid PHP Library!";
+ $from = new SendGrid\Email(null,'sales@windberrysolar.com');
  $to = new SendGrid\Email(null, $_POST['email']);
- $content = new SendGrid\Content("text/plain", "Hello, Email!");
+ $subject="Enquiry Message";
+ $sender=$_POST["name"];
+ $senderEmail=$_POST["email"];
+ $senderPhone=$_POST["phone"];
+ $message=$_POST["message"];
+ $mailBody="Name: $sender\nEmail: $senderEmail\nPhone: $senderPhone\n\n$message";
+ $content = new SendGrid\Content("text/plain", $mailBody);
  $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
  $apiKey = getenv('SENDGRID_API_KEY');
  $sg = new \SendGrid($apiKey);
-echo 'sg';
+
 $response = $sg->client->mail()->send()->post($mail);
 echo $response->statusCode();
 echo $response->headers();
 echo $response->body();
+$thankYou="<p>Thank you! Your message has been sent.</p>";
+    echo("<br>".$thankYou);
+    echo("Status : ".$status);
     }
 ?>
