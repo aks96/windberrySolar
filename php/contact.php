@@ -1,6 +1,6 @@
 <?php 
 require '../vendor/autoload.php';
-if(($_POST['submit'])){
+
 
  $from = new SendGrid\Email(null,"sales@windberrysolar.com");
  $to = new SendGrid\Email(null, $_POST['email']);
@@ -22,5 +22,5 @@ $thankYou="<p>Thank you! Your message has been sent.</p>";
     echo("<br>".$thankYou);
     
 
-    }
+    
 ?>
