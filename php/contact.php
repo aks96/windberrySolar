@@ -1,6 +1,6 @@
 <?php 
 require '../vendor/autoload.php';
-if(isset($_POST['submit'])){
+if(($_POST['submit'])){
 
  $from = new SendGrid\Email(null,"sales@windberrysolar.com");
  $to = new SendGrid\Email(null, $_POST['email']);
