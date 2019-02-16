@@ -17,11 +17,11 @@ if(isset($_POST['submit'])){
  $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
+
 $thankYou="<p>Thank you! Your message has been sent.</p>";
     echo("<br>".$thankYou);
-    echo("Status : ".$status);
+    echo("Status : ".$response);
+
+
     }
 ?>
