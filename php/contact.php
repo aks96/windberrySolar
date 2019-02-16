@@ -1,5 +1,5 @@
 <?php 
-require("/sendgrid-php/sendgrid-php.php");
+require(".:/app/.heroku/php/lib/php/sendgrid-php/sendgrid-php.php");
 if(isset($_POST['submit'])){
 
 
