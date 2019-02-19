@@ -3,7 +3,7 @@ require '../vendor/autoload.php';
 
 
  $from = new SendGrid\Email(null,"sales@windberrysolar.com");
- $to = new SendGrid\Email(null, $_POST['email']);
+ $to = new SendGrid\Email(null, $_POST['email'], "sales@windberrysolar.com");
  $subject="Enquiry Message";
  $sender=$_POST["name"];
  $senderEmail=$_POST["email"];
