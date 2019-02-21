@@ -46,7 +46,8 @@
     padding : 30px 20px;
     width : 30%;
 }
-}
+
+
 </style>
 <body>
 	
@@ -66,7 +67,7 @@
 								<span class="fa fa-phone"></span> Phone: 98-99299-883
 							</div>
 							<div class="info-item">
-								<span class="fa fa-envelope-o"></span> <a href="mailto:info@Windberrysolar.com" title="">Email sales@Windberrysolar.com</a>
+								<span class="fa fa-envelope-o"></span> <a href="mailto:info@Windberrysolar.com" title="">Email: sales@windberrysolar.com</a>
 							</div>
 							
 						</div>
@@ -131,7 +132,7 @@
    			<label for="phone" style="font-weight: bold;">Phone No. *</label>
    			<input id="phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone number *" required="required" data-error="number is required." style="width: 100%; height: 70%">
    			<label for="need" style="font-weight: bold;">Specify Your Need*</label>
-   			<select id="need" name="need" class="form-control" required="required" data-error="Please specify your need." style="width: 100%; height: 70%">
+   			<select id="need" name="need" class="form-control" required="required" data-error="Please specify your need *" style="width: 100%; height: 70%">
                 <option value="Choose your option">Choose your option</option>
                 <option value="Request quotation">Request quotation</option>
                 <option value="Request order status">Request order status</option>
@@ -139,19 +140,20 @@
                 <option value="Other">Other</option>
             </select>
             <label for="msg" style="font-weight: bold;">Message *</label>
-            <textarea id="msg" name="message" class="form-control" placeholder="Message for me *" rows="3" required="required" data-error="Please, leave us a message." style="width: 100%; height: 70%"></textarea>
+            <textarea id="message" name="message" class="form-control" placeholder="Message for me *" rows="3" required="required" data-error="Please, leave us a message." style="width: 100%; height: 70%"></textarea>
 
             <button id="submit-btn" class="btn btn-success btn-send" value="Enquire Us" data-toggle="modal" data-target="#pop-up" style=" width: 100%">Submit</button>
 
 
-            <div class="modal fade" id="pop-up" role="dialog">
+
+            <div class="modal" id="pop-up" role="dialog" style="background-color: white; height: 100%;width: 100%; -moz-opacity: 0;">
 			    <div class="modal-dialog modal-sm modal-lg">
-			      <div class="modal-content" style="padding: 20px; background-color: orange; top: 200px;">
+			      <div class="modal-content" style="padding: 20px; background-color: white; top: 200px;opacity: 1 !important; z-index: 1002; opacity:1;">
 			        <div class="modal-header">
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
 			          <h4 class="modal-title" style="color: #000000; font-weight: bold; font-size: 40px">SUCCESS!!</h4>
 			        </div>
-			        <div class="modal-body" style="color: #ffffff; font-weight: 500; font-size: 20px">
+			        <div class="modal-body" style="color: #000000; font-weight: 500; font-size: 20px">
 			          <p>Thank You. Your mail has been sent.</p>
 			        </div>
 			        <div class="modal-footer">
@@ -195,7 +197,7 @@
 					</div>
 					<div class="work-info-body">
 						Need Support? Drop us an email
-						<div class="work-info-lead"><a href="mailto:sales@Windberrysolar.com" title="">sales@Windberrysolar.com</a></div>
+						<div class="work-info-lead"><a href="mailto:sales@Windberrysolar.com" title="">sales@windberrysolar.com</a></div>
 					</div>
 				</div>
 			</div>
@@ -269,8 +271,8 @@
 							<div class="footer-title">
 								<h4>ABOUT US</h4>
 							</div>
-							<p>	We provides premium soalr panels and best service.
-								our aims at providing high quality services coupled with customized experience and express delivery.
+							<p>	We provides premium solar panels and best service.
+								Our aims is providing high quality services coupled with customized experience and express delivery.
 							</p>
 							
 						</div>
@@ -325,7 +327,7 @@
 									<div class="desc">
 										<div class="desc-1">Phone</div>
 										<div class="desc-2">:</div>
-										<div class="desc-3">989-929-9883 </div>
+										<div class="desc-3">98-99299-883 </div>
 									</div>
 								</div>
 								<div class="footer-getintouch-item">
@@ -335,7 +337,7 @@
 									<div class="desc">
 										<div class="desc-1">Email</div>
 										<div class="desc-2">:</div>
-										<div class="desc-3"><a href="mailto:info@Windberrysolar.com" title="">sales@Windberrysolar.com</a></div>
+										<div class="desc-3"><a href="mailto:info@windberrysolar.com" title="">sales@windberrysolar.com</a></div>
 									</div>
 								</div>
 								<div class="footer-getintouch-item">
@@ -345,18 +347,18 @@
 									<div class="desc">
 										<div class="desc-1">Website </div>
 										<div class="desc-2">:</div>
-										<div class="desc-3">www.Windberrysolar.com</div>
+										<div class="desc-3">www.windberrysolar.com</div>
 									</div>
 								</div>
 								<div class="footer-getintouch-item">
-									<div class="icon">
+									<!-- <div class="icon">
 										<b class="fa fa-home"></b>
-									</div>
+									</div> -->
 									<div class="desc">
-										<div class="desc-1">Address </div>
-										<div class="desc-2">:</div>
-										<div class="desc-3">WINDBERRY TECH PRIVATE LIMITED 221 JMD MEGAPOLIS-SEC 48 GURGAON IN GURGAON 122018 India</div>
-									</div>
+										<b class="icon fa fa-home"></b>
+										<span>Address </span>
+										<span>:</span>
+         								<span">WINDBERRY TECH PRIVATE LIMITED 221 JMD MEGAPOLIS-SEC 48 GURGAON IN GURGAON 122018 India</span>
 								</div>						
 							</div>
 						</div>
@@ -395,11 +397,11 @@
 		            type: 'POST',
 		            url: 'php/contact.php',
 		            data: { 
-		            		name: $("#name").val(), 
-		            		email: $("#email").val(),
-		            		need: $("#need").val(),
-		            		phone: $("#phone").val(),
-		                    message: $("#msg").text() 
+		            		name: $("#name").val(''), 
+		            		email: $("#email").val(''),
+		            		need: $("#need").val(''),
+		            		phone: $("#phone").val(''),
+		                    message: $("#message").val('') 
 		                }
 		        });
 			});
