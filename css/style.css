@@ -274,9 +274,40 @@ p {
 /* ==========================
 3. Banner
 ============================= */
+.first-section {
+	margin-top: 140px;
+}
 .banner{
 	position:relative;
 	margin-top:145px;
+}
+#contact-form {
+	padding : 30px 0px;
+	background-color: #000;
+	opacity: 0.8;
+	border-radius: 20px;
+	-webkit-box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
+box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
+}
+.form-element {
+	margin : 10px;
+}
+.form-element input, .form-element select, .form-element textarea {
+	border : 1px solid #c0c0c0;
+	border-radius: 20px;
+}
+.btn-send {
+	margin-top : 20px;
+	border-radius: 20px;
+}
+.imgbg {
+	position: absolute;
+	top : 0px;
+	z-index: -999;
+	/*height:450px;*/
+	height: 100%;
+	width: 100%;
 }
 .banner .imgbg{
 	height:450px;
@@ -284,7 +315,10 @@ p {
 .banner .imgbg img{
 	display:none;
 }
-.banner .title-box h2{
+.title-box-container {
+	margin-top: 10%;
+}
+.title-box{
 	text-align: left;
     font-size: 30px;
     color: #fff;
@@ -384,12 +418,12 @@ p {
 	right: 50%;
 }
 
-.work-info{
+/*.work-info{
 	position:absolute;
 	bottom:0;
 	left:0;
 	width:100%;
-}
+}*/
 .work-info-item{
 	padding:0;
 	color:#fff;
@@ -1475,6 +1509,10 @@ p.help-block.text-danger li {
 .footer{
 	
 }
+
+.danger {
+	border : 2px solid red !important;
+}
 .f-desc{
 	background-color:#252525;
 	color:#fff;
@@ -1491,7 +1529,7 @@ p.help-block.text-danger li {
     color: #999999;
     font-weight: 400;
 	margin-bottom: 20px;
-	min-height: 250px;
+	/*min-height: 250px;*/
 }
 .footer-sosmed{
 	margin-top: 20px;
@@ -1695,7 +1733,10 @@ p.help-block.text-danger li {
 		text-align: left;
 	}
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
+	.first-section {
+		margin-top : 20px;
+	}
 	.services-item-image img{
 		position:static;
 	}	

@@ -29,12 +29,7 @@
 	
 </head>
 <style type="text/css">
-	.mySlides {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-}
-
+/*
 #contact-form {
     position:absolute; 
     left: 900px;
@@ -42,14 +37,47 @@
     z-index:10;
     background-color: #000000;
     opacity: 0.6;
-    /*width: 30% */
     padding : 30px 20px;
     width : 30%;
-}
+}*/
 
+@media screen and (max-width: 900px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 
 </style>
 <body>
+	<div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-body">
+	          <p>SUCCESS!</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+  </div>
+	<!-- <div class="modal fade modal-lg" id="pop-up" role="dialog" style="background-color: white;">
+	    <div class="modal-dialog modal-sm modal-lg">
+	      <div class="modal-content" style="padding: 20px; background-color: white;">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title" style="color: #000000; font-weight: bold; font-size: 40px">SUCCESS!!</h4>
+	        </div>
+	        <div class="modal-body" style="color: #000000; font-weight: 500; font-size: 20px">
+	          <p>Thank You. Your mail has been sent.</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	</div> -->
 	
 	<div class="animationload">
 		<div class="loader"></div>
@@ -57,7 +85,7 @@
 	
 	
 	<!-- NAVBAR SECTION -->
-	<div class="navbar navbar-main navbar-fixed-top">
+	<nav class="navbar navbar-main navbar-fixed-top">
 		<div class="header-top">
 			<div class="container">
 				<div class="row">
@@ -71,284 +99,247 @@
 							</div>
 							
 						</div>
-					</div>
-					<!-- <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-						<div class="top-sosmed pull-right">
-							<a href="https://web.facebook.com/Windberrysolar" title=""><span class="fa fa-facebook"></span></a>
-							<a href="#" title=""><span class="fa fa-twitter"></span></a>
-							<a href="#" title=""><span class="fa fa-instagram"></span></a>							
-						</div>
-					</div>			 -->		
+					</div>	
 				</div>
 			</div>
 		</div>
-		
-		
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" /></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.html">HOME</a></li>					
-					<li><a href="about.html">ABOUT</a></li>
-					<li><a href="services.html">SERVICES</a></li>
-					<!-- <li><a href="pricing.html">PRICING</a></li>
-					<li><a href="faq.html">FAQ</a></li>
-					<li><a href="contact.html">CONTACT</a></li> -->
-				</ul>
-			</div>
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="" /></a>
 		</div>
-    </div>
+
+		<div class="navbar-collapse collapse" style="padding:0px 20px;">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">HOME</a></li>					
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="services.html">SERVICES</a></li>
+			</ul>
+		</div>
+    </nav>
 
  
 	<!-- BANNER -->
-	<div class="section banner">
-		<div class="container pos-relative">
-			<div class="caption">
-				<div class="title-box">
-					<h2 style="color: 'red'">India's Natural Energy Resource Panel Supplier</h2>
+	<div class="row first-section">
+		<div class="col-sm-12 section">
+
+			<div class="col-sm-8" style="height: 100%; z-index: +100;">
+				<div class="title-box-container col-sm-8">
+					<h2 class="title-box">India's Natural Energy Resource Panel Supplier</h2>
 				</div>
-				<!-- <a href="contact_form.html" title="" class="btn btn-default">ENQUIRE TO US</a> -->
+			</div>
+			<div class="imgbg mySlides" style="background:url('images/banner2.jpg') no-repeat center center;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover"></div>
+			<div class="imgbg mySlides" style="background:url('images/banner3.jpg') no-repeat center center;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover"></div>
+			<div class="imgbg mySlides" style="background:url('images/banner4.jpg') no-repeat center center;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover"></div>
+				<!-- <img class="mySlides" src="images/banner2.jpg" style="width:100%">
+			  	<img class="mySlides" src="images/banner3.jpg" style="width:100%">
+			  	<img class="mySlides" src="images/banner4.jpg" style="width:100%"> -->
+			<div class="col-sm-4" style="padding : 20px;">
+
+				<form class="col-sm-12" id="contact-form" role="form" action="/action_page.php">
+					<div class="col-sm-12 form-element">
+					    <input type="text" id="name" name="name" placeholder="Name" data-error="Name is required" class="input input-lg col-sm-8 col-sm-offset-2">
+					</div>
+					<div class="col-sm-12 form-element">
+					    <input type="text" id="email" name="email" placeholder="Email" required="required" data-error="Email is rquired" class="input input-lg col-sm-8 col-sm-offset-2">
+					</div>
+					<div class="col-sm-12 form-element">
+					    <input type="text" id="phone" name="phone" placeholder="Phone" required="required" data-error="Phone number is rquired" class="input input-lg col-sm-8 col-sm-offset-2">
+					</div>
+					<div class="col-sm-12 form-element">
+					    <select class="input input-lg col-sm-8 col-sm-offset-2" id="need" name="need">
+					      <option value="choose your option">Choose Your Option</option>
+					      <option value="Request quotation">Request Quotation</option>
+					      <option value="Request order status">Request order status</option>
+					      <option value="Request copy of an invoice">Request copy of an invoice</option>
+					      <option value="Other">Other</option>
+					    </select>
+					</div>
+					<div class="col-sm-12 form-element">
+						<textarea class="col-sm-8 col-sm-offset-2" id="message" name="message" placeholder="Write your message"></textarea>
+					</div>
+					<div class="col-sm-12 text-center">
+					 	<button id="submit-btn" class="col-sm-4 col-sm-offset-4 btn btn-md btn-success btn-send" value="Enquire Us" data-toggle="modal">Submit</button>
+					</div>
+
+
+
+					
+				</form>
+			</div>
+			<div class="col-sm-12 work-info">
+				<div class="container">
+					<div class="work-info-item">
+						<div class="work-info-icon">
+							<span class="fa fa-phone"></span>
+						</div>
+						<div class="work-info-body">
+							Have a question? call us now
+							<div class="work-info-lead">98-99299-883</div>
+						</div>
+					</div>
+					<div class="work-info-item">
+						<div class="work-info-icon">
+							<span class="fa fa-clock-o"></span>
+						</div>
+						<div class="work-info-body">
+							We are open Week days
+							<div class="work-info-lead">8AM-10PM</div>
+						</div>
+					</div>
+					<div class="work-info-item">
+						<div class="work-info-icon">
+							<span class="fa fa-envelope"></span>
+						</div>
+						<div class="work-info-body">
+							Need Support? Drop us a mail
+							<div class="work-info-lead"><a href="mailto:sales@Windberrysolar.com" title="">sales@windberrysolar.com</a></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="imgbg" style="background:url('images/banner2.jpg') no-repeat center center;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover">
-			<img class="mySlides" src="images/banner2.jpg" style="width:100%">
-		  <img class="mySlides" src="images/banner3.jpg" style="width:100%">
-		  <img class="mySlides" src="images/banner4.jpg" style="width:100%">
+
 		
-		 
-		  <!-- form -->
-		  <form id="contact-form" role="form" >
-		  	<label for="name" style="font-weight: bold;">Firstname *</label>
-		  	<input id="name" type="text" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="Namename is required." style="width: 100%; height: 70%">
-   			<!-- <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required."> -->
-   			<label for="email" style="font-weight: bold;">Email *</label>
-   			<input id="email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Email is required." style="width: 100%; height: 70%">
-   			<label for="phone" style="font-weight: bold;">Phone No. *</label>
-   			<input id="phone" type="text" name="phone" class="form-control" placeholder="Please enter your phone number *" required="required" data-error="number is required." style="width: 100%; height: 70%">
-   			<label for="need" style="font-weight: bold;">Specify Your Need*</label>
-   			<select id="need" name="need" class="form-control" required="required" data-error="Please specify your need *" style="width: 100%; height: 70%">
-                <option value="Choose your option">Choose your option</option>
-                <option value="Request quotation">Request quotation</option>
-                <option value="Request order status">Request order status</option>
-                <option value="Request copy of an invoice">Request copy of an invoice</option>
-                <option value="Other">Other</option>
-            </select>
-            <label for="msg" style="font-weight: bold;">Message *</label>
-            <textarea id="message" name="message" class="form-control" placeholder="Message for me *" rows="3" required="required" data-error="Please, leave us a message." style="width: 100%; height: 70%"></textarea>
 
-            <button id="submit-btn" class="btn btn-success btn-send" value="Enquire Us" data-toggle="modal" data-target="#pop-up" style=" width: 100%">Submit</button>
-
-
-
-            <div class="modal" id="pop-up" role="dialog" style="background-color: white; height: 100%;width: 100%; -moz-opacity: 0;">
-			    <div class="modal-dialog modal-sm modal-lg">
-			      <div class="modal-content" style="padding: 20px; background-color: white; top: 200px;opacity: 1 !important; z-index: 1002; opacity:1;">
-			        <div class="modal-header">
-			          <button type="button" class="close" data-dismiss="modal">&times;</button>
-			          <h4 class="modal-title" style="color: #000000; font-weight: bold; font-size: 40px">SUCCESS!!</h4>
-			        </div>
-			        <div class="modal-body" style="color: #000000; font-weight: 500; font-size: 20px">
-			          <p>Thank You. Your mail has been sent.</p>
-			        </div>
-			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        </div>
-			      </div>
-			    </div>
-			</div>
-		</form>
-		</div>
-
-
-
-		<!-- <div class="w3-content w3-section" style="max-width:500px">
-		  <img class="mySlides" src="images/banner2.png" style="width:100%">
-		  <img class="mySlides" src="images/banner3.jpg" style="width:100%">
-		  <img class="mySlides" src="img_chicago.jpg" style="width:100%">
-		</div> -->
-		<div class="work-info">
-			<div class="container">
-				<div class="work-info-item">
-					<div class="work-info-icon">
-						<span class="fa fa-phone"></span>
-					</div>
-					<div class="work-info-body">
-						Have a question? call us now
-						<div class="work-info-lead">98-99299-883</div>
-					</div>
-				</div>
-				<div class="work-info-item">
-					<div class="work-info-icon">
-						<span class="fa fa-clock-o"></span>
-					</div>
-					<div class="work-info-body">
-						We are open Week days
-						<div class="work-info-lead">8AM-10PM</div>
-					</div>
-				</div>
-				<div class="work-info-item">
-					<div class="work-info-icon">
-						<span class="fa fa-envelope"></span>
-					</div>
-					<div class="work-info-body">
-						Need Support? Drop us a mail
-						<div class="work-info-lead"><a href="mailto:sales@Windberrysolar.com" title="">sales@windberrysolar.com</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 	
 	
+	<div class="row">
+
 	<!-- ABOUT SECTION -->
-	<div class="section about">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12">
-					<div class="page-title">
-						<h2 class="lead">WHY CHOOSE US?</h2>
-						<p class="sublead">We are here to serve you product for your better tomowrrow.</p>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<div class="why-item">
-						<div class="icon">
-							<div class="fa fa-money"></div>
-						</div>
-						<div class="ket">
-							<h4>AFFORDABLE PRICE</h4>
-						
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<div class="why-item">
-						<div class="icon">
-							<div class="fa fa-truck"></div>
-						</div>
-						<div class="ket">
-							<h4>EXPRESS DELIVERY</h4>
-							
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-					<div class="why-item">
-						<div class="icon">
-							<div class="fa fa-life-bouy"></div>
-						</div>
-						<div class="ket">
-							<h4>ECOFRIENDLY</h4>
-							
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			
-		</div>
-	</div>
-
-	
-
-	
-	<!-- FOOTER SECTION -->
-	<div class="footer">
-	
-		<div class="f-desc">
+		<div class="col-sm-12 section about">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-4">
-						<div class="footer-item">
-							<div class="footer-title">
-								<h4>ABOUT US</h4>
-							</div>
-							<p>	We provide premium solar panels and best service.
-								Our aim is providing high quality services coupled with customized experience and express delivery.
-							</p>
-							
+					<div class="col-sm-12 col-md-12">
+						<div class="page-title">
+							<h2 class="lead">WHY CHOOSE US?</h2>
+							<p class="sublead">We are here to serve you product for your better tomowrrow.</p>
 						</div>
 					</div>
-					
-					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-4">
-						<div class="footer-item">
-							<div class="footer-title">
-								<h4>OPERATIONAL TIMINGS</h4>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+						<div class="why-item">
+							<div class="icon">
+								<div class="fa fa-money"></div>
 							</div>
-							<p>
-								Mon-Sun<br>
-								8AM-10PM<br><br><br>
+							<div class="ket">
+								<h4>AFFORDABLE PRICE</h4>
 							
-							
-							
+							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-4">
-						<div class="footer-item">
-							<div class="footer-title">
-								<h4>GET IN TOUCH</h4>
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+						<div class="why-item">
+							<div class="icon">
+								<div class="fa fa-truck"></div>
 							</div>
-							<div class="footer-getintouch">
-								<div class="footer-getintouch-item">
-									<div class="icon">
-										<b class="fa fa-phone"></b>
-									</div>
-									<div class="desc">
-										<div class="desc-1">Phone</div>
-										<div class="desc-2">:</div>
-										<div class="desc-3">98-99299-883 </div>
-									</div>
-								</div>
-								<div class="footer-getintouch-item">
-									<div class="icon">
-										<b class="fa fa-envelope "></b>
-									</div>
-									<div class="desc">
-										<div class="desc-1">Email</div>
-										<div class="desc-2">:</div>
-										<div class="desc-3"><a href="mailto:info@windberrysolar.com" title="">sales@windberrysolar.com</a></div>
-									</div>
-								</div>
-								<div class="footer-getintouch-item">
-									<div class="icon">
-										<b class="fa fa-globe"></b>
-									</div>
-									<div class="desc">
-										<div class="desc-1">Website </div>
-										<div class="desc-2">:</div>
-										<div class="desc-3">www.windberrysolar.com</div>
-									</div>
-								</div>
-								<div class="footer-getintouch-item">
-									<!-- <div class="icon">
-										<b class="fa fa-home"></b>
-									</div> -->
-									<div class="desc">
-										<b class="icon fa fa-home"></b>
-										<span>Address </span>
-										<span>:</span>
-         								<span">WINDBERRY TECH PRIVATE LIMITED 221 JMD MEGAPOLIS-SEC 48 GURGAON IN GURGAON 122018 India</span>
-								</div>						
+							<div class="ket">
+								<h4>EXPRESS DELIVERY</h4>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+						<div class="why-item">
+							<div class="icon">
+								<div class="fa fa-life-bouy"></div>
+							</div>
+							<div class="ket">
+								<h4>ECOFRIENDLY</h4>
+								
 							</div>
 						</div>
 					</div>
 					
 				</div>
-			</div>
 				
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div class="row footer f-desc text-center">
+		<div class="col-sm-4" style="padding : 0px 30px;">
+			<div class="footer-item">
+				<div class="footer-title">
+					<h4>ABOUT US</h4>
+				</div>
+				<p>	We provide premium solar panels and best service.
+					Our aim is providing high quality services coupled with customized experience and express delivery.
+				</p>
+				
+			</div>
+		</div>
+					
+		<div class="col-sm-4" style="padding : 0px 30px;">
+			<div class="footer-item">
+				<div class="footer-title">
+					<h4>OPERATIONAL TIMINGS</h4>
+				</div>
+				<p>
+					Mon-Sun<br>
+					8AM-10PM<br><br><br>
+				</p>
+			</div>
+		</div>
+		<div class="col-sm-4" style="padding :0px 30px;">
+			<div class="footer-item">
+				<div class="footer-title">
+					<h4>GET IN TOUCH</h4>
+				</div>
+				<div class="footer-getintouch">
+					<div class="footer-getintouch-item">
+						<div class="icon">
+							<b class="fa fa-phone"></b>
+						</div>
+						<div class="desc">
+							<div class="desc-1">Phone</div>
+							<div class="desc-2">:</div>
+							<div class="desc-3">98-99299-883 </div>
+						</div>
+					</div>
+					<div class="footer-getintouch-item">
+						<div class="icon">
+							<b class="fa fa-envelope "></b>
+						</div>
+						<div class="desc">
+							<div class="desc-1">Email</div>
+							<div class="desc-2">:</div>
+							<div class="desc-3"><a href="mailto:info@windberrysolar.com" title="">sales@windberrysolar.com</a></div>
+						</div>
+					</div>
+					<div class="footer-getintouch-item">
+						<div class="icon">
+							<b class="fa fa-globe"></b>
+						</div>
+						<div class="desc">
+							<div class="desc-1">Website </div>
+							<div class="desc-2">:</div>
+							<div class="desc-3">www.windberrysolar.com</div>
+						</div>
+					</div>
+					<div class="footer-getintouch-item">
+						<div class="desc">
+							<b class="icon fa fa-home"></b>
+							<span>Address </span>
+							<span>:</span>
+								<span>
+									WINDBERRY TECH PRIVATE LIMITED 221 JMD MEGAPOLIS-SEC 48 GURGAON IN GURGAON 122018 India
+								</span>
+						</div>						
+					</div>
+				</div>
+			</div>
 		</div>
 		
-		<div class="fcopy">
+		<!-- <div class="fcopy">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -356,7 +347,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		
 	</div>
 	
@@ -370,18 +361,34 @@
 			$("#submit-btn").click(function(e){
 				console.log("button clicked");
 				e.preventDefault();
+				if($("#name").val() == "" || $("#email").val() == "" || $("#need").val() == "" || $("#phone").val() == "") {
+					console.log("Fill the requirement");
+					$("#name").addClass("danger");
+					$("#email").addClass("danger");
+					$("#need").addClass("danger");
+					$("#phone").addClass("danger");
+					return;
+				}
 				// var formName = $("#form_name").val()
 				console.log("Submitting form");
 		        $.ajax({
 		            type: 'POST',
 		            url: 'php/contact.php',
 		            data: { 
-		            		name: $("#name").val(''), 
-		            		email: $("#email").val(''),
-		            		need: $("#need").val(''),
-		            		phone: $("#phone").val(''),
-		                    message: $("#message").val('') 
-		                }
+	            		name: $("#name").val(), 
+	            		email: $("#email").val(),
+	            		need: $("#need").val(),
+	            		phone: $("#phone").val(),
+	                    message: $("#message").text() 
+		            },
+		            complete : function(data, status) {
+		            	console.log("form submit complete");
+		            	$("#name").val("");
+		            	$("#email").val("");
+		            	$("#phone").val("");
+		            	$("#message").text("");
+		            	$("#myModal").modal();
+		            }
 		        });
 			});
 		});
@@ -414,9 +421,8 @@
 	</script> -->
 	<script>
 		function myFunction() {
-  		alert("The form was submitted");
-	}
-	<script>
+  			alert("The form was submitted");
+		}
 		var myIndex = 0;
 		carousel();
 
