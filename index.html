@@ -379,14 +379,14 @@
 	            		email: $("#email").val(),
 	            		need: $("#need").val(),
 	            		phone: $("#phone").val(),
-	                    message: $("#message").text() 
+	                    message: $("#message").val() 
 		            },
 		            complete : function(data, status) {
 		            	console.log("form submit complete");
 		            	$("#name").val("");
 		            	$("#email").val("");
 		            	$("#phone").val("");
-		            	$("#message").text("");
+		            	$("#message").val("");
 		            	$("#myModal").modal();
 		            }
 		        });
