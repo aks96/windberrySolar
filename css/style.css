@@ -282,9 +282,10 @@ p {
 	margin-top:145px;
 }
 #contact-form {
+	padding-left: 10px;
 	padding : 30px 0px;
 	background-color: #000;
-	opacity: 0.8;
+	opacity: 0.7;
 	border-radius: 20px;
 	-webkit-box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
 -moz-box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
@@ -292,10 +293,12 @@ box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
 }
 .form-element {
 	margin : 10px;
+	padding-right: 10px;
 }
 .form-element input, .form-element select, .form-element textarea {
 	border : 1px solid #c0c0c0;
 	border-radius: 20px;
+	
 }
 .btn-send {
 	margin-top : 20px;
@@ -1674,7 +1677,7 @@ p.help-block.text-danger li {
 		text-align: center;
 		padding-bottom: 20px;
 	}
-	.navbar-main .nav > li > a {
+	.main .nav > li > a {
         padding-left: 15px;
         padding-right: 15px;
 	}
