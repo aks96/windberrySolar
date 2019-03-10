@@ -1,7 +1,7 @@
 <?php 
 require '../vendor/autoload.php';
 
- $to = new SendGrid\Email(null,"navneet920@gmail.com","sales@windberrysolar.com","gagan.roxstar007@gmail.com");
+ $to = new SendGrid\Email(null,"sales@windberrysolar.com");
  $from = new SendGrid\Email(null,"sales@windberrysolar.com");
  // $to = new SendGrid\Email(null, $_POST['mail']);
  $subject="Enquiry Message";
@@ -18,10 +18,10 @@ require '../vendor/autoload.php';
  $apiKey = getenv('SENDGRID_API_KEY');
  $sg = new \SendGrid($apiKey);
 
-$response = $sg->client->mail()->send()->post($mail);
+ $response = $sg->client->mail()->send()->post($mail);
 
- $to1 = new SendGrid\Email(null,"navneet920@gmail.com","sales@windberrysolar.com","gagan.roxstar007@gmail.com");
- $from1 = new SendGrid\Email(null,"sales@windberrysolar.com");
+ $to1 = new SendGrid\Email(null,$senderEmai);
+ 
 
  $mailBody1="Thankyou  for contacting us. Our team will contact you shorlty";
  $content1 = new SendGrid\Content("text/plain", $mailBody1);
@@ -34,7 +34,7 @@ $response = $sg->client->mail()->send()->post($mail);
 
 
 
-$thankYou="<p>Thank you! Your message has been sent.</p>";
+ $thankYou="<p>Thank you! Your message has been sent.</p>";
     echo("<br>".$thankYou);
     
 
