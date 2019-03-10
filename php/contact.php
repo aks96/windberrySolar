@@ -19,13 +19,13 @@ require '../vendor/autoload.php';
  $sg = new \SendGrid($apiKey);
  
  $response = $sg->client->mail()->send()->post($mail);
- echo $to1 , $mailBody1 , $content1, $response1" mail 1";
+ echo $to1 , $mailBody1 , $content1, $response1 ," mail 1";
  $to1 = new SendGrid\Email(null,$senderEmai);
  $mailBody1="Thankyou  for contacting us. Our team will contact you shorlty";
  $content1 = new SendGrid\Content("text/plain", $mailBody1);
  $mail1 = new SendGrid\Mail($from, $subject, $senderEmail, $content1);
  $response1 = $sg->client->mail()->send()->post($mail1);
- echo $to1 , $mailBody1 , $content1, $response1" mail 2";
+ echo $to1 , $mailBody1 , $content1, $response1," mail 2";
  
 
 
