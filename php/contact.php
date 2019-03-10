@@ -1,10 +1,9 @@
 <?php 
 require '../vendor/autoload.php';
 
-
+ $to = new SenderGrid\Email(null,"navneet920@gmail.com");
  $from = new SendGrid\Email(null,"sales@windberrysolar.com");
  // $to = new SendGrid\Email(null, $_POST['mail']);
- $to = new SenderGrid\Email(null,"navneet920@gmail.com");
  $subject="Enquiry Message";
  $sender=$_POST["name"];
  $senderEmail=$_POST["email"];
