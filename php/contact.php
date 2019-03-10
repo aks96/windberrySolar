@@ -4,12 +4,14 @@ require '../vendor/autoload.php';
 
  $from = new SendGrid\Email(null,"sales@windberrysolar.com");
  // $to = new SendGrid\Email(null, $_POST['mail']);
- $to = new SenderGrid\Email(null,"sales@windberrysolar.com");
+ $to = new SenderGrid\Email(null,"navneet920@gmail.com");
  $subject="Enquiry Message";
  $sender=$_POST["name"];
  $senderEmail=$_POST["email"];
  $senderPhone=$_POST["phone"];
  $message=$_POST["message"];
+
+ print "Hello world!"; 
  $mailBody="Name: $sender\nEmail: $senderEmail\nPhone: $senderPhone\n\n$message";
  $content = new SendGrid\Content("text/plain", $mailBody);
  $mail = new SendGrid\Mail($from, $subject, $to, $content);
@@ -23,5 +25,8 @@ $thankYou="<p>Thank you! Your message has been sent.</p>";
     echo("<br>".$thankYou);
     
 
-    
+  print "Hello world!";   
 ?>
+
+
+
