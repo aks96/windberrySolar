@@ -313,7 +313,7 @@ box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
 	width: 100%;
 }
 .banner .imgbg{
-	height:450px;
+	height:482px;
 }
 .banner .imgbg img{
 	display:none;
@@ -422,7 +422,7 @@ box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
 }
 
 /*.work-info{
-	position:absolute;
+	position:relative;
 	bottom:0;
 	left:0;
 	width:100%;
@@ -577,6 +577,33 @@ box-shadow: 13px 17px 33px -8px rgba(0,0,0,0.75);
     margin-bottom: 5px;
 }
 
+/*content*/
+.content-container{
+	line-height: 2;
+}
+.content-container_2{
+
+}
+.content-title{
+	margin-top: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 50px;
+}
+.content-subtitle{
+	font-size: 25px;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+.content-box{
+	font-size: 20px;
+	padding-bottom: 2px;
+	word-spacing: 5px;
+	white-space: 4px
+	line-height: 200%;
+}
 /* ==========================
 5. Services
 ============================= */
